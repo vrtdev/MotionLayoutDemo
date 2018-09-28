@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+        motion:constraintSetEnd="@layout/video_overlay_fullscreen"
+        motion:constraintSetStart="@layout/video_overlay_small"
+        motion:duration="200">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:maxAcceleration="25"
+            motion:touchAnchorId="@id/video_overlay_touchable_area"
+            motion:touchAnchorSide="left"/>
+
+        <KeyFrameSet>
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:sizePercent="0"
+                motion:target="@id/video_overlay_thumbnail"/>
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:percentY="0.4"
+                motion:sizePercent="0"
+                motion:target="@id/video_overlay_title"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>
